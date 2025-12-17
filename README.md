@@ -4,8 +4,8 @@
 Python과 Java로 알고리즘 문제를 풀이하고 기록하는 저장소입니다.
 
 ## 구성
-- coding-test/programmers-python
-- coding-test/programmers-java
+- coding-test/python
+- coding-test/java
 
 ## 목표
 - 문제 해결 능력 향상
