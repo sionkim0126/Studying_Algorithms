@@ -17,5 +17,6 @@ public class bj_00 {
             result = a + b;
             System.out.println(result);
         }
+        sc.close();
     }
 }
