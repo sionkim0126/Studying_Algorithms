@@ -1,0 +1,34 @@
+/*
+문제 : 훈제오리구이를 시작하는 시각과 오븐구이를 하는 데 필요한 시간이 분단위로 주어졌을 때, 오븐구이가 끝나는 시각을 계산하는 프로그램을 작성하시오.
+번호 : 2525
+조건 : 첫째 줄에는 현재 시각이 나온다. 현재 시각은 시 A (0 ≤ A ≤ 23) 와 분 B (0 ≤ B ≤ 59)가 정수로 빈칸을 사이에 두고 순서대로 주어진다. 
+       두 번째 줄에는 요리하는 데 필요한 시간 C (0 ≤ C ≤ 1,000)가 분 단위로 주어진다.
+출처 : BaekJoon
+*/
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+public class bj02_06 {
+    public static void main(String[] args) throws Exception {
+        BufferedReader bu = new BufferedReader(new InputStreamReader(System.in));
+        String[] arr = bu.readLine().split(" ");
+        int h = Integer.parseInt(arr[0]);//10
+        int m = Integer.parseInt(arr[1]);//45
+        int t = Integer.parseInt(bu.readLine());//80
+
+        int time = (h*60) + m + t; // 10*60+45 = 645 + 80 = 725
+        // System.out.println(time);
+        h = time / 60;
+        if(h > 23){
+            h -= 24;
+        }
+        m = time % 60;
+        if(m > 60){
+            h++;
+            m -= 60;
+        }
+        System.out.println(h + " " + m);
+        
+
+    }
+}
