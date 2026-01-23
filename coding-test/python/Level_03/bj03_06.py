@@ -5,6 +5,7 @@
         다음 T줄에는 각각 두 정수 A와 B가 주어진다. A와 B는 1 이상, 1,000 이하이다.
 출처 : BaekJoon
 '''
+
 import sys
 
 input = sys.stdin.readline
