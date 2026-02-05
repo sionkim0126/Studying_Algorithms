@@ -1,0 +1,37 @@
+/*
+문제 : 도현이는 바구니를 총 N개 가지고 있고, 각각의 바구니에는 1번부터 N번까지 번호가 매겨져 있다. 
+또, 1번부터 N번까지 번호가 적혀있는 공을 매우 많이 가지고 있다. 가장 처음 바구니에는 공이 들어있지 않으며, 바구니에는 공을 1개만 넣을 수 있다.
+도현이는 앞으로 M번 공을 넣으려고 한다. 도현이는 한 번 공을 넣을 때, 공을 넣을 바구니 범위를 정하고, 정한 바구니에 모두 같은 번호가 적혀있는 공을 넣는다. 
+만약, 바구니에 공이 이미 있는 경우에는 들어있는 공을 빼고, 새로 공을 넣는다. 공을 넣을 바구니는 연속되어 있어야 한다.
+공을 어떻게 넣을지가 주어졌을 때, M번 공을 넣은 이후에 각 바구니에 어떤 공이 들어 있는지 구하는 프로그램을 작성하시오.
+번호 : 10810
+출처 : BaekJoon
+*/
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+public class bj04_05 {
+    public static void main(String[] args){
+        try {
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            String[] arr = br.readLine().split(" ");
+            int a = Integer.parseInt(arr[0]);
+            int b = Integer.parseInt(arr[1]);
+            int[] m = new int[a];
+            for(int i = b; i > 0; i--){
+                String[] arr2 = br.readLine().split(" ");
+                int a2 = Integer.parseInt(arr2[0]);
+                int b2 = Integer.parseInt(arr2[1]);
+                int c2 = Integer.parseInt(arr2[2]);
+                for(int j = a2-1; j < b2; j++ ){
+                    m[j] = c2;
+                }
+            }
+            for (int i = 0; i < m.length; i++) {
+                System.out.print(m[i] + " ");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
