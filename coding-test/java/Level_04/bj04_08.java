@@ -15,17 +15,17 @@ public class bj04_08 {
 
     public static void main(String[] args) throws Exception{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int[] a = new int[10];
         Map<Integer, Integer> b = new HashMap<>();
         int count = 0;
         for(int j = 0; j < 10; j++){
             b.put(j, 0);
         }
-
         for(int i = 0; i < 10; i++){
-            a[i] = Integer.parseInt(br.readLine());
-            int c = a[i] % 42;
+            int a = Integer.parseInt(br.readLine());
+            int c = a % 42;
             if(c > 0){
+                //여기가 문제!! 
+                // 중복된 값이 되는 나머지가 나온다면 문제 발생 >  i가 1일 때 a = 43이면 c = 1 , i가 2일 때 a가 43이면 c = 1 그럼 중복을 처리 못함
                 b.put(i, b.get(i)+1);
             }
         }
